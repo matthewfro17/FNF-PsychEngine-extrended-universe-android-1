@@ -212,6 +212,10 @@ jobs:
           haxelib install hxcpp-debug-server
           haxelib git extension-androidtools https://github.com/jigsaw-4277821/extension-androidtools  
           haxelib git extension-videoview https://github.com/zatrit/extension-videoview
+          haxelib run lime config ANDROID_SDK $ANDROID_SDK_ROOT
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_ROOT
+          haxelib run lime config JAVA_HOME $JAVA_HOME
+          haxelib run lime config ANDROID_SETUP true
           haxelib list
           
       - name: Create Version Tag
